@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model LoginModel
+@{
+	ViewData["Title"] = "Login";
+}
+<link href="~/css/user/login.css" rel="stylesheet" />
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label style="cursor:pointer" for="tab-1" class="tab">Sign In</label>
+		<input id="tab-2" type="radio" name="tab" class="for-pwd"><label style="cursor:pointer" for="tab-2" class="tab">Forgot Password</label>
+		<div class="login-form">
+			<form method="post">
+			<div class="sign-in-htm">
+				<div class="group">
+					<label for="user" class="label">Email</label>
+					<input id="user" asp-for="email" type="text" class="input">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Password</label>
+						<input id="pass" asp-for="password" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Sign In" asp-action="Login"><br />
+					<a class="button register" asp-controller="User" asp-action="Index" >New User</a>
+				</div>
+				<div class="hr"></div>
+			</div>
+			</form>
+			<div class="for-pwd-htm">
+				<div class="group">
+					<label for="user" class="label">Username or Email</label>
+					<input id="user" type="text" class="input">
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Reset Password">
+				</div>
+				<div class="hr"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<br /><br />

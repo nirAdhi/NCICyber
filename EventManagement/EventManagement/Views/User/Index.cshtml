@@ -1,0 +1,108 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model UserModel
+@{
+   
+	ViewData["Title"] = "Register";
+}
+<link href="~/css/user/user-register.css" rel="stylesheet" />
+
+<div class="container">
+    <br />
+    <form class="form-horizontal" role="form" method="post">
+        <h2>Registration</h2>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @{
+            if(ViewBag.status==0){
+                <span class="text-danger">@ViewBag.msg</span>
+            }
+        }
+        
+        <div class="form-group">
+            <label for="firstName" class="col-sm-3 control-label">First Name*</label>
+            <div class="col-sm-9">
+                <input type="text" id="firstName" asp-for="firstName" placeholder="First Name" class="form-control" autofocus>
+                <span asp-validation-for="firstName" class="text-danger"></span>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastName" class="col-sm-3 control-label">Last Name</label>
+            <div class="col-sm-9">
+                <input type="text" id="lastName" asp-for="lastName" placeholder="Last Name" class="form-control" autofocus>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="col-sm-3 control-label">Email* </label>
+            <div class="col-sm-9">
+                <input type="email" id="email" asp-for="email" placeholder="Email" class="form-control" name="email">
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-3 control-label">Password*</label>
+            <div class="col-sm-9">
+                <input type="password" id="password" asp-for="password" placeholder="Password" class="form-control">
+                <span asp-validation-for="password" class="text-danger"></span>
+            </div>
+            
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-3 control-label">Confirm Password*</label>
+            <div class="col-sm-9">
+                <input type="password" id="passwordConf" asp-for="confirmPassword" placeholder="Password" class="form-control">
+            </div>
+            <span asp-validation-for="confirmPassword" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="birthDate" class="col-sm-3 control-label">Date of Birth*</label>
+            <div class="col-sm-9">
+                <input type="date" id="birthDate" asp-for="dob" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber" class="col-sm-3 control-label">Phone number </label>
+            <div class="col-sm-9">
+                <input type="number" id="mobile" asp-for="mobile" placeholder="Mobile number" class="form-control">
+                <span asp-validation-for="mobile" class="text-danger"></span>
+                <span class="help-block">Your mobile number won't be disclosed anywhere </span>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label class="control-label col-sm-3">Gender</label>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label class="radio-inline">
+                            <input type="radio" group="gender" asp-for="gender" id="maleRadio" value="1" checked>Male
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="radio-inline">
+                            <input type="radio" id="femaleRadio" asp-for="gender" group="gender" value="2">Female
+                        </label>
+                    </div>
+                    
+                </div>
+            </div>
+        </div> <!-- /.form-group -->
+        <div class="form-group">
+            <div class="col-sm-9 col-sm-offset-3">
+                <span class="help-block">*Required fields</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-8">
+                 <button type="submit" class="btn btn-primary btn-block">Register</button>
+             </div>
+            <div class="col-sm-4">
+                <a style="cursor:pointer;" asp-action="Login">Already Register</a>
+            </div>
+        </div>
+       
+    </form> <!-- /form -->
+
+</div>
+<!--container end.//-->

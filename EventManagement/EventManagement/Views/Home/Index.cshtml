@@ -1,0 +1,228 @@
+﻿@{
+    ViewData["Title"] = "NIRADHI";
+}
+
+<header id="header" role="banner">
+	<div class="main-nav">
+		<div class="container">
+			<div class="header-top">
+				<div class="pull-right social-icons">
+					<a href="https://twitter.com/NCIRL"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.facebook.com/NCIRL/"><i class="fa fa-facebook"></i></a>
+					<a href="https:https://www.linkedin.com/school/national-college-of-ireland/"><i class="fa fa-linkedin"></i></a>
+					<a href="https://www.youtube.com/watch?v=q5hlclxVlCA"><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="navbar-header">
+					<a href="https://www.ncirl.ie/">
+                        <img class="img-responsive" src="~/NCI_Logo_white.png" alt="logo" height="170" width="170">
+				   </a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="scroll active"><a href="#Home"><font face="Jokerman">Home</font></a></li>
+						<li class="scroll"><a href="#explore"><font face="Jokerman">WHEN</font></a></li>
+						<li class="scroll"><a href="#event"><font face="Jokerman">Event</font></a></li>
+						<li class="scroll"><a href="#about"><font face="Jokerman">About</font></a></li>
+						<li class="scroll active"><a asp-controller="User" asp-action="Index"><font face="Jokerman">Register</font></a></li>
+						<!--<li><a class="no-scroll" href="#" target="_blank"><font face="Jokerman">Register</font></a></li> -->
+						<li class="scroll"><a href="#contact"><font face="Jokerman">Contact</font></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<link href="~/css/home/main.css" rel="stylesheet" />
+	<link href="~/css/home/css/animate.css" rel="stylesheet">
+	<link href="~/css/home/css/responsive.css" rel="stylesheet">
+	<script src="~/js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="~/js/home/js/gmaps.js"></script>
+    <script src="~/js/home/js/smoothscroll.js"></script>
+    <script src="~/js/home/js/jquery.parallax.js"></script>
+    <script src="~/js/home/js/coundown-timer.js"></script>
+    <script src="~/js/home/js/jquery.scrollTo.js"></script>
+    <script src="~/js/home/js/jquery.nav.js"></script>
+    <script src="~/js/home/js/main.js"></script>
+</header>
+<!--/#header-->
+
+<section id="home">
+	<div id="main-slider" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#main-slider" data-slide-to="0" class="active"></li>
+			<li data-target="#main-slider" data-slide-to="1"></li>
+			<li data-target="#main-slider" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="item active">
+				<img class="img-responsive" src="images/slider/nci_bg1.jpg" alt="slider" width="100%">
+				<div class="carousel-caption">
+					<h2><font face="Algerian"> Register for this even </font></h2>
+					<h4><font face="Algerian">Take part in all the events €30</font></h4>
+					<a href="https://niradhi.github.io/nci-techfusion/reg.html">GRAB YOUR TICKETS now<i class="fa fa-angle-right"></i></a>
+				</div>
+			</div>
+			<div class="item">
+				<img class="img-responsive" src="images/slider/nci_bg3.jpg" alt="slider" width="100%">
+				<div class="carousel-caption">
+					<h2><font face="Algerian"> Register for this even </font></h2>
+					<h4><font face="Algerian">Take part in all the events €30</font></h4>
+					<a href="https://niradhi.github.io/nci-techfusion/reg.html">GRAB YOUR TICKETS now<i class="fa fa-angle-right"></i></a>
+				</div>
+			</div>
+			<div class="item">
+				<img class="img-responsive" src="images/slider/NCI_website_banner3.jpg" alt="slider" width="100%">
+				<div class="carousel-caption">
+					<h2><font face="Algerian"> Register for this even </font></h2>
+					<h4><font face="Algerian">Take part in all the events €30</font></h4>
+					<a href="https://niradhi.github.io/nci-techfusion/reg.html">GRAB YOUR TICKETS now<i class="fa fa-angle-right"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--/#home-->
+
+<section id="explore">
+	<div class="container">
+		<div class="row">
+			<div class="watch">
+				<img class="img-responsive" src="images/watch.png" alt="">
+			</div>
+			<div class="col-md-4 col-md-offset-2 col-sm-5">
+				<h2><font style="Jokerman">The event is on</font></h2>
+			</div>
+			<div class="col-sm-7 col-md-6">
+				<script src="https://cdn.logwork.com/widget/countdown.js"></script>
+				<a href="https://logwork.com/countdown-wmzy" class="countdown-timer" data-style="flip2" data-timezone="Europe/Dublin" data-date="2022-12-31 11:59">HACKED!</a>
+			</div>
+		</div>
+		<div class="cart">
+			<a href="reg.html"><i class="fa fa-shopping-cart"></i> <span>Purchase Tickets</span></a>
+		</div>
+		<div class="text-right">
+			<p>&copy; POWERED BY<a href="https://logwork.com/countdown-wmfx">LOGWORK</a>
+		</div>
+	</div>
+</section><!--/#explore-->
+
+<section id="event">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-9">
+				<div id="event-carousel" class="carousel slide" data-interval="false">
+					<h2 class="heading"><b>WE WATCH. WE PROTECT</h2>
+					<div class="carousel-inner">
+						<div class="item active">
+							<div class="row">
+								<div class="col-sm-4">
+									<a asp-controller="User" asp-action="Index">
+									<div class="single-event" >
+										<img class="img-responsive" src="images/event/event1.jpg" alt="event-image">
+										<h4>HACK-A-THON</h4>
+										<h5>Individual</h5>
+									</div>
+									</a>
+								</div>
+								<a asp-controller="User" asp-action="Index">
+								<div class="col-sm-4">
+									<div class="single-event">
+										<img class="img-responsive" src="images/event/event 2.jpg" alt="event-image">
+										<h4>BUG HUNTER</h4>
+										<h5>Individual</h5>
+									</div>
+								</div>
+								</a>
+								<a asp-controller="User" asp-action="Index">
+								<div class="col-sm-4">
+									<div class="single-event">
+										<img class="img-responsive" src="images/event/G-event1.jpg" alt="event-image">
+										<h4>CYBER LEAGUE</h4>
+										<h5>Individual</h5>
+									</div>
+								</div>
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!--/#event-->
+
+<section id="about">
+	<div class="guitar2">
+		<img class="img-responsive" src="images/event_11.jpg" alt="guitar">
+	</div>
+	<div class="about-content">
+		<h2>About NIRADHI</h2>
+		<p>We have created an extremely positive and relaxed environment all geared towards developing your skills whether you are an absolute beginner trying to get off the ground or an accomplished player looking to move to the next level. Team NIRADHI will provide with all the assistance and resources to help you start from the scratch and be a part of this event</p>
+		<a href="https://niradhi.github.io/nci-techfusion/index.html#explore" class="btn btn-primary">View Date<i class="fa fa-angle-right"></i></a>
+
+	</div>
+</section><!--/#about-->
+
+<section id="contact">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.6830759918967!2d-6.245181484290158!3d53.34892917997958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e8cd86e97e7%3A0x6d51b774ee7fa935!2sNational%20College%20of%20Ireland!5e0!3m2!1sen!2sie!4v1665924476307!5m2!1sen!2sie" width="1520" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+	<div class="contact-section">
+		<div class="ear-piece">
+			<img class="img-responsive" src="images/ear-piece.png" alt="">
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3 col-sm-offset-4">
+					<div class="contact-text">
+						<h3>Contact</h3>
+						<address>
+							E-mail: 236abhishekshetty@gmail.com<br>
+							Tel: 01 4498 500<br>
+							Fax: 01 4972 200<br>
+						</address>
+					</div>
+					<div class="contact-address">
+						<h3>Contact</h3>
+						<address>
+							National College of Ireland<br>
+							Mayor Street<br>
+							IFSC<br>
+							Dublin 1<br>
+						</address>
+					</div>
+				</div>
+				<div class="col-sm-5">
+					<div id="contact-section">
+						<h3>Send a message</h3>
+						<div class="status alert alert-success" style="display: none"></div>
+						<form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
+							<div class="form-group">
+								<input type="text" name="name" class="form-control" required="required" placeholder="Name">
+							</div>
+							<div class="form-group">
+								<input type="email" name="email" class="form-control" required="required" placeholder="Email ID">
+							</div>
+							<div class="form-group">
+								<textarea name="message" id="message" required="required" class="form-control" rows="4" placeholder="Enter your message"></textarea>
+							</div>
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary pull-right">Send</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
