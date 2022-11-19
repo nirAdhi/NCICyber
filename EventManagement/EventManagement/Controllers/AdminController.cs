@@ -52,7 +52,7 @@ namespace EventManagement.Controllers
                                     name = u.FirstName + " " + u.LastName,
                                     email = u.Email,
                                     eventName = eventName,
-                                    date = e.CreateDate.Value.ToString("mm/dd/yyyy")
+                                    date = e.CreateDate.Value.ToString("MM/dd/yyyy")
                                 };
                    
 
