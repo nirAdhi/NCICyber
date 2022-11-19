@@ -21,10 +21,16 @@
 <body>
 
     <div class="navbar">
-        <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-        <a href="#"><i class="fa fa-fw fa-search"></i> Events</a>
+        <a class="active" asp-action="Index"><i class="fa fa-fw fa-home"></i> Home</a>
         <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-        <a asp-controller="User" asp-action="Logout"><i class="fa fa-fw fa-user"></i> Logout</a>
+        <a href="#"><i class="fa fa-fw fa-key"></i> Change Password</a>
+        <a style="float:right" asp-controller="User" asp-action="Logout"><i class="fa fa-fw fa-user"></i> Logout</a>
+        @{
+            string username = Context.Session.GetString("username") ?? "";
+        }
+        <a id="username" style="float:right;color: chartreuse;">
+            Welcome @username
+        </a>
     </div>
 
     <div style="min-height:500px;">

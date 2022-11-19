@@ -15,7 +15,7 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         @{
             if(ViewBag.status==0){
-                <span class="text-danger">@ViewBag.msg</span>
+                    <span class="text-danger">@ViewBag.msg</span>
             }
         }
         
@@ -58,16 +58,24 @@
         <div class="form-group">
             <label for="birthDate" class="col-sm-3 control-label">Date of Birth*</label>
             <div class="col-sm-9">
-                <input type="date" id="birthDate" asp-for="dob" class="form-control">
+                <input type="date" id="birthDate" min="1990-01-01" max="2022-01-01" value=""  asp-for="dob" class="form-control">
             </div>
         </div>
         <div class="form-group">
             <label for="phoneNumber" class="col-sm-3 control-label">Phone number </label>
-            <div class="col-sm-9">
-                <input type="number" id="mobile" asp-for="mobile" placeholder="Mobile number" class="form-control">
-                <span asp-validation-for="mobile" class="text-danger"></span>
-                <span class="help-block">Your mobile number won't be disclosed anywhere </span>
+            <div class="col-sm-3">
+                <select id="ddlCountryCode" asp-for="countrycode" class="form-control">
+                  <option value="+353">+353</option>
+                  <option value="+1">+1</option>
+                  <option value="+91">+91</option>
+                </select>
             </div>
+            <div class="col-sm-6">
+                <input type="text" id="mobile" asp-for="mobile" maxlength="10" placeholder="Mobile number(10 digit)" class="form-control">
+                <span asp-validation-for="mobile" class="text-danger"></span>
+            </div>
+            
+            <span class="help-block">&nbsp;&nbsp;&nbsp;&nbsp;Your mobile number won't be disclosed anywhere </span>
         </div>
         
         <div class="form-group">

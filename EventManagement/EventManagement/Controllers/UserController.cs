@@ -40,6 +40,8 @@ namespace EventManagement.Controllers
                     Mobile = userModel.mobile,
                     RoleId = 2,     //2-Candidate,1-Admin
                     CreateDate = DateTime.Now,
+                    CountryCode=userModel.countrycode,
+                    Dob=userModel.dob,
                     PasswordHash = passwordHash,
                     PasswordSalt = passwordSalt,
                     VerificationToken = Crypto.CreateRandomToken()
@@ -49,6 +51,10 @@ namespace EventManagement.Controllers
                 dbContext.Dispose();
                 if (res > 0)
                 {
+                    HttpContext.Session.SetString("username", userModel.firstName);
+                    HttpContext.Session.SetString("email", userModel.email);
+                    HttpContext.Session.SetString("id", status.ToString());
+                    HttpContext.Session.SetString("role", "candidate");
                     return RedirectToAction("Index", "Candidate");
                 }
             }
@@ -74,17 +80,18 @@ namespace EventManagement.Controllers
                     var status = Crypto.VerifyPasswordHash(login.password, objUser.PasswordHash, objUser.PasswordSalt);
                     if (status)
                     {
+                        HttpContext.Session.SetString("username", objUser.FirstName);
+                        HttpContext.Session.SetString("email", objUser.Email);
+                        HttpContext.Session.SetString("id", objUser.Id.ToString());
                         if (objUser.RoleId == 1)
                         {
-                            HttpContext.Session.SetString("username", objUser.FirstName);
-                            HttpContext.Session.SetString("email", objUser.Email);
+                            
                             HttpContext.Session.SetString("role", "admin");
                             return RedirectToAction("Dashboard", "Admin");
                         }
                         else
                         {
-                            HttpContext.Session.SetString("username", objUser.FirstName);
-                            HttpContext.Session.SetString("email", objUser.Email);
+                            
                             HttpContext.Session.SetString("role", "candidate");
                             return RedirectToAction("Index", "Candidate");
                         }

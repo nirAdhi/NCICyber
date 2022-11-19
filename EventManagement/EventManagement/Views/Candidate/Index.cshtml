@@ -4,4 +4,82 @@
 @{
     ViewData["Title"] = "Index";
 }
-<h1>Candidate</h1>>
+<div class="container">
+    <div class="row">
+    @{
+        if(@ViewBag.status==1){
+            <div class="form-group">
+                    <div class="alert alert-success alert-dismissible fade in show col-md-offset-2 col-md-10">
+                    <strong>Success!</strong> @ViewBag.msg
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+            </div>
+        }
+        else if(@ViewBag.status==0){
+            <div class="form-group">
+                    <div class="alert alert-info alert-dismissible fade in show" role="alert" col-md-offset-2 col-md-10">
+                    <strong>Info!</strong> @ViewBag.msg  <a asp-action="EventRegistration">Register</a>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+            </div>
+        }
+    }
+    </div>
+    <div class="has-user-generated-content">
+        <div class="eds-l-mar-vert-6 eds-l-sm-mar-vert-4 eds-text-bm structured-content-rich-text">
+            <div class="eds-text--left">
+                <h1>Challenge</h1>
+                <p>Our world is VUCA which means that the environment is volatile, uncertain, complex and ambiguous. These are the characteristics that we have to deal with in today’s world. In this situation, it is important to develop tools that help us to navigate through these conditions in order to succeed. One tool to overcome this is a method called growth hacking. The idea is simple:</p><ul><li>Make everything an assumption</li><li>Run experiments to verify or fail this assumption</li><li>Use this feedback to improve</li></ul><p>By applying this method in short iterations (i.e. 2 weeks), you will continuously gather valuable information that can be used to make better decisions. This is why growth hacking can be a useful tool for entrepreneurs, marketers and product managers. But how do you use this method in practice?</p><p>The process is simple enough so that it can easily be applied by anyone. However, there are is a lack of tools that support this process. This is why I decided to host a hackathon to build a tool that would help to use growth hacking in practice.</p><p>There are three key elements that we want to solve.</p><h3>Describe goals / assumptions with measurable KPIs</h3><p>You have goals that you want to achieve. Since we live in a VUCA world it is not 100% clear what the best way to achieve these goals is. So we need to make assumptions that need to be validated. We validate or reject assumptions by measuring if a certain outcome has been achieved. Here is an example: You want to increase the number of signups for your app. You have a certain hypothesis about how this can be achieved: If we add a button that says “Get App” and place it above the fold on our website, we will get more downloads. We validate or reject this assumption by measuring if there is an increase by at least 5% within 2 weeks in downloads after adding this button.</p><h3>Create experiments on those assumptions</h3><p>An experiment is a timed activity in which you test your assumptions by measuring a specific outcome. It holds the data and shows this data to you in a way that makes it easy to understand (i.e. charts, widgets, ...). The experiment describes a set of actions that need to be taken.</p><h3>Generating insights and iterate</h3><p>When analyzing the outcome of an experiment we generate insights that help us to build a better product. We easily see if the outcome is achieved and can verify or reject the assumption. However, more important are the insights we gain during the experiment. We get a better understanding of what works and why , which allows us to make better decisions in the future. This is usually the start for the next iteration with a more informed approach.</p><p></p><h3>Your challenge</h3><p>Build a tool that supports the overall process. This means in particular:</p><ul><li>Create assumptions along with their respective measurables</li><li>Define experiments and visualize data that is tracked during the lifetime of the experiment</li></ul><p>Create a tool to track and manage insights</p>
+            </div>
+        </div>
+        <div class="eds-l-mar-vert-6 eds-l-sm-mar-vert-4 eds-text-bm structured-content-rich-text">
+            <div class="eds-text--left">
+                <h1>Quickfacts</h1>
+                <ul>
+                    <li>Maximum group size is 5. Don't worry, if you don't have a team yet. There will be time for you to build teams during the hackathon.</li>
+                    <li>The hackathon will be held from Friday 9th December to Sunday 11th December 2022. All mentioned times are in CET / UTC+1.</li>
+                    <li>There will be a total of <strong>3 winners</strong>. First place takes home <strong>1.500€</strong>, second place <strong>1.000€ </strong>and third <strong>500€</strong>.</li>
+                    <li>The hackathon will be held online. We will use Zoom, Miro and other tools for coordination.</li>
+                </ul>
+                <p></p>
+                <h1>Your benefits</h1>
+                <ul>
+                    <li>Winning teams take home <strong>3.000€</strong> in total!</li>
+                    <li>Get in touch with <strong>creative minds</strong> and experts from the industry.</li>
+                    <li>Winners have the chance to develop their solution and will be supported by us.</li>
+                    <li>Level up your skills in development, UI/UX and AI. <strong>Gain practical experience</strong>, with the help of coaches.</li>
+                    <li>We will <strong>showcase winning teams</strong> and their submissions in all our channels or even make a case studio together</li>
+                    <li>Each teams <strong>get a coach</strong> from their respective stream, who helps them to reach their goals during the hackathon.</li>
+                </ul>
+                <h3></h3>
+                <h1>FAQ</h1>
+                <p><strong>Where does the hackathon take place?</strong></p>
+                <p>The Hackathon takes place online. An invitation to a zoom call will be sent out shortly before the start.</p>
+                <p><strong>When is the Hackathon?</strong></p>
+                <p>The hackathon will take place from 09th December 2021 to 11th December 2021</p>
+                <p><strong>When will the winners be announced?</strong></p>
+                <p>Winners Will be announced one week after the hackathon ends.</p>
+                <p><strong>I don't have a team. Can I still participate?</strong></p>
+                <p>Sure thing! There will be a team building session at the beginning of the hackathon. If you don't have a team by then, this is the chance! We improved the team building process for the upcoming hackathon. We will send out more information  soon.</p>
+                <p><strong>How do the teams get together?</strong></p>
+                <p>During the registration process you will have to create a new team or join an existing team. If you create a new team you can share the team information with your friends so they can easily join.</p>
+                <p><strong>Who is the event aimed at?</strong></p>
+                <p>We want to bring together UI /UX engineers, developers (either code first or low / no code) and business professionals. This is sometimes referred to as Fusion Developer Teams. We believe these types of teams are best suited to tackle today's problems to shape tomorrow's world of tomorrow.</p>
+                <p><strong>Who organises the Hackathon?</strong></p>
+                <p>The Hackathon is organised by NanoGaints. You can find out more about the NanoGiants at https://nanogiants.de. Contact us anytime via hackthons@nanogiants.de.</p>
+                <p><strong>What does the participation cost?</strong></p><p>The participation is free of charge.</p>
+                <p><strong>How do we present our ideas?</strong></p>
+                <p>There will be a submission sheet where you can enter all relevant information. Fill this sheet out until  end of the event.</p>
+                <p><strong>How can I get in contact with you in general?</strong></p>
+                <p>Before and after the hackathon you can reach us at hackathons@nanogiants.de.</p>
+                <p><strong>How can I ask questions in between?</strong></p>
+                <p>During the event we have a slack channel where you can ask all your questions.</p>
+                <p><strong>Who has the rights to the developed solutions?</strong></p><p>Each contestant has to submit their solution under CC0 license.</p><p><strong>Who is on the jury?</strong></p><p>The jury consists of the three nanogiants, who are experts on their respective fields (i.e. development, AI, UX).</p><p><strong>What are the criteria used by the jury?</strong></p><p>There are two main judging criteria, with each three sub criteria and a bonus. They are as follows:</p><p>&zwj;1. Implementation</p><ul><li>Is your solution implemented (i.e. no click dummy) and available online?</li><li>Can the solution be run and is it mostly free of bugs (we know that this is a hackathon)?-</li><li> How many of the features (described above) are implemented?</li><li>BONUS: Most features implemented</li></ul><p>2. Idea and concept</p><ul><li>How well does your solution support the growth hacking process as described above?</li><li>How innovative is your solution?</li><li>Does it minimize repetitive tasks and is it easy to interact with?</li><li>BONUS: Best Design / UX</li></ul><p><strong>I work at the NanoGiants. Can I participate and win?</strong></p><p>NanoGiants employees are welcome to participate in the hackathon, but cannot receive any prize money. NanoGiants who are interested in participating should contact the organiser for further details.</p><p><strong>I am no pro at AI or UX. Can I still participate?</strong></p><p>Sure thing! The goal of this hackathon is to provide solutions for a real world problem. So creativity and thinking on valuable solutions is as important. You can contribute this way! Also we will send out resources for you to deep dive into either one. Additionally we will hold a keynote with further information what UX is.</p>
+            </div>
+        </div>
+    </div>
+</div>

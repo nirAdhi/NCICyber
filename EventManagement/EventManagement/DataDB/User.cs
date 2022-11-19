@@ -9,10 +9,11 @@ namespace EventManagement.DataDB
         public DateTime? CreateDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
         public int? RoleId { get; set; }
-        public string FirstName { get; set; }
+        public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;
         public DateTime? Dob { get; set; }
         public int? Gender { get; set; }
+        public string? CountryCode { get; set; }
         public string? Mobile { get; set; }
         public string Email { get; set; } = null!;
         public string PasswordHash { get; set; } = null!;

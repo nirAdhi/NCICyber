@@ -16,6 +16,8 @@ namespace EventManagement.DataDB
         {
         }
 
+        public virtual DbSet<Event> Events { get; set; } = null!;
+        public virtual DbSet<EventRegistration> EventRegistrations { get; set; } = null!;
         public virtual DbSet<Role> Roles { get; set; } = null!;
         public virtual DbSet<User> Users { get; set; } = null!;
 
@@ -30,6 +32,32 @@ namespace EventManagement.DataDB
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Event>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("Event");
+
+                entity.Property(e => e.EventName)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
+
+                entity.Property(e => e.Price).HasColumnType("decimal(18, 2)");
+            });
+
+            modelBuilder.Entity<EventRegistration>(entity =>
+            {
+                entity.ToTable("EventRegistration");
+
+                entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
+
+                entity.Property(e => e.CreateDate).HasColumnType("datetime");
+
+                entity.Property(e => e.TotalAmount).HasColumnType("decimal(18, 2)");
+            });
+
             modelBuilder.Entity<Role>(entity =>
             {
                 entity.HasKey(e => e.RoleId);
@@ -49,19 +77,31 @@ namespace EventManagement.DataDB
 
                 entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
 
+                entity.Property(e => e.CountryCode)
+                    .HasMaxLength(4)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.CreateDate).HasColumnType("datetime");
 
                 entity.Property(e => e.Dob)
                     .HasColumnType("date")
                     .HasColumnName("DOB");
 
-                entity.Property(e => e.Email).HasMaxLength(50);
+                entity.Property(e => e.Email)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
 
-                entity.Property(e => e.FirstName).HasMaxLength(20);
+                entity.Property(e => e.FirstName)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
 
-                entity.Property(e => e.LastName).HasMaxLength(50);
+                entity.Property(e => e.LastName)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
 
-                entity.Property(e => e.Mobile).HasMaxLength(15);
+                entity.Property(e => e.Mobile)
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.ModifiedDate).HasColumnType("datetime");
 
