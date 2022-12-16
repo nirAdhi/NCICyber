@@ -27,6 +27,7 @@ namespace EventManagement.Models
         public string password { get; set; }
 
         [Required,DataType(DataType.Password), Compare(nameof(password),ErrorMessage ="Password and confirm password should be same."),DisplayName("Confirm Password")]
+       
         public string confirmPassword { get; set; }
     }
     public class LoginModel

@@ -8,10 +8,10 @@ builder.Services.AddDistributedMemoryCache();
 
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromSeconds(50);
-    options.Cookie.HttpOnly = true;
-    options.Cookie.IsEssential = true;
-});
+   options.IdleTimeout = TimeSpan.FromSeconds(50);
+   options.Cookie.HttpOnly = true;
+   options.Cookie.IsEssential = true;
+   });
 
 builder.Services.AddSession();
 
@@ -36,7 +36,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseCookiePolicy();
+// app.UseCookiePolicy();
 app.UseAuthorization();
 app.UseSession();
 app.MapControllerRoute(
