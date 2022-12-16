@@ -24,7 +24,7 @@ namespace EventManagement.Controllers
             else
             {
                 ViewBag.status = 0;
-                ViewBag.msg = "You are not participate any event .To participate click here ";
+                ViewBag.msg = "You have not registered to any event .To participate/regiter click here ";
             }
             return View();
         }
@@ -75,7 +75,7 @@ namespace EventManagement.Controllers
                     if (status > 0)
                     {
                         ViewBag.status = 1;
-                        ViewBag.msg = "Event register Successfully";
+                        ViewBag.msg = "Event registered Successfully. You would be contacted by our co-ordinators with respect to payment";
                     }
                     else
                     {
