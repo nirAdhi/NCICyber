@@ -13,6 +13,7 @@ builder.Services.AddSession(options =>
    options.Cookie.IsEssential = true;
    });
 
+
 builder.Services.AddSession();
 
 builder.Services.AddHttpsRedirection(options =>
@@ -36,7 +37,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-// app.UseCookiePolicy();
+app.UseCookiePolicy();
 app.UseAuthorization();
 app.UseSession();
 app.MapControllerRoute(

@@ -11,7 +11,7 @@ namespace EventManagement.Models
         public string lastName { get; set; }
         public int? gender { get; set; }
 
-        [DataType(DataType.Date)]
+        [Required, DataType(DataType.Date)]
         public DateTime dob { get; set; }
 
         [RegularExpression(@"^[0-9]{10}$", ErrorMessage ="Mobile number should be 10 digit")]
