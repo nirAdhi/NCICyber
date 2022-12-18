@@ -6,7 +6,7 @@ namespace EventManagement.Models
     public class UserModel
 	{
         [Required,DisplayName("First Name")]
-        [StringLength(30, MinimumLength = 4)]
+        [StringLength(30, MinimumLength = 3)]
         public string firstName { get; set; }
         public string lastName { get; set; }
         public int? gender { get; set; }
